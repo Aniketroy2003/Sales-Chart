@@ -1,0 +1,76 @@
+Objective:
+
+Develop a Django web application that displays data from a PostgreSQL database in a chart which has records for monthly inserted data on an HTML page. 
+Requirements:
+
+    Database:
+        Use PostgreSQL as the database.
+        Create a simple table SalesData with the following columns:
+            id (Primary Key, Integer)
+            sale_date (Date)
+            amount (Decimal)
+
+    Functionality:
+        Fetch and display the sales data grouped by month in a chart on an HTML page.
+        Implement caching using Redis to store the monthly aggregated data.
+
+    Technologies:
+        Django (latest stable version)
+        PostgreSQL
+        Redis
+        Celery (for background tasks if needed)
+        Chart.js (or any other chart library) for rendering charts in HTML
+
+Detailed Steps:
+
+    Setup Django Project:
+        Create a new Django project and application.
+        Configure the project to use PostgreSQL.
+
+    Database Model:
+        Create a SalesData model as specified.
+        Add some dummy data to the SalesData table for testing.
+
+    Data Aggregation:
+        Write a Django view that queries the SalesData table, aggregates the data by month, and returns the aggregated data.
+
+    Caching with Redis:
+        Integrate Redis with Django.
+        Cache the aggregated monthly data in Redis.
+        Ensure the view fetches data from Redis if available, otherwise queries the database and stores the result in Redis.
+
+    Chart Rendering:
+        Create an HTML page with a chart (using Chart.js or any other library).
+        Display the monthly sales data in the chart.
+
+    Background Tasks (Optional):
+        Use Celery to update the cached data periodically (optional but a plus).
+
+    Documentation:
+        Provide a README file with clear instructions on how to set up and run the application.
+
+Evaluation Criteria:
+
+    Code Quality:
+        Clean and readable code with appropriate comments.
+        Proper use of Django features and best practices.
+        Use Camel Casing while naming vairables in the project.
+
+    Functionality:
+        The app should meet all specified requirements.
+        The chart should correctly display the monthly aggregated data.
+
+    Performance:
+        Efficient use of caching with Redis.
+        Proper handling of cache invalidation and updates.
+
+    Documentation:
+        Clear instructions for setting up and running the project.
+        Explanation of design decisions where applicable.
+
+Submission:
+
+    Please provide a link to a GitHub repository containing the code.
+    Copied or AI Generated codes will subject to disqualification.
+    Include instructions for setting up the project in the repository's README file.
+    Delayed Submissions will subject to disqualification
