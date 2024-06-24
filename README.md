@@ -1,11 +1,6 @@
-TO RUN THIS APPLICATION PLEASE FOLLOW THE STEPS
+#### TO RUN THIS APPLICATION PLEASE FOLLOW THE STEPS
 
 
-=> Activate the virtual environment
-
-```bash
-venv/Scripts/activate
-```
 
 => install the requirements.txt file
 
